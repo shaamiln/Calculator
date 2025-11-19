@@ -3,51 +3,81 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+
+    /* Background Image */
+    background: url('"C:\Users\Administrator\Downloads\photo-1614200179396-2bdb77ebf81b.jpg"') no-repeat center center/cover;
+
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Glassmorphism calculator box */
 .calculator {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 320px;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Display */
 .display {
-    background-color: #222;
-    color: red;
-    text-align: right;
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .display input {
     width: 100%;
     background: none;
     border: none;
-    color: white;
-    font-size: 2em;
+    color: #00ffea;
+    font-size: 2.2em;
     text-align: right;
 }
 
+/* Buttons Layout */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
+/* Buttons style */
 button {
-    border: 1px solid #ccc;
     padding: 20px;
-    font-size: 1.5em;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
     cursor: pointer;
-    background-color: #fff;
+    transition: 0.2s;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Hover Glow */
 button:hover {
-    background-color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
+/* Button Press Effect */
 button:active {
-    background-color: #ddd;
+    transform: translateY(1px);
+    background: rgba(240, 240, 240, 0.8);
+}
+
+/* Special buttons (like operations) */
+button.operator {
+    background: rgba(0, 200, 255, 0.6);
+    color: white;
+}
+
+button.operator:hover {
+    background: rgba(0, 200, 255, 0.8);
 }
